@@ -44,7 +44,7 @@
 
   gtag('config', 'G-V49PHR46HX');
 </script>
-
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=zpsu4h7mo8"></script>
   </head>
   <body>
 
@@ -651,7 +651,16 @@
           </div>
 
           <div class="col-md-6 d-flex align-items-stretch">
-          	<div id="map"></div>
+          	<!-- 기본 지도 -->
+<div id="map" style="width:464px;height:400px;"></div>
+<script>
+  var mapOptions = {
+    center: new naver.maps.LatLng(37.5710911,126.9914501),
+    zoom: 17
+  };
+
+  var map = new naver.maps.Map('map', mapOptions);
+</script>
           </div>
         </div>
       </div>
