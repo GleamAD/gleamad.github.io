@@ -642,7 +642,7 @@
                 <input type="text" class="form-control" placeholder="Subject" name="title">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="message" placeholder="Message"></textarea>
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message" name="message"></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
@@ -656,11 +656,28 @@
           	<!-- 기본 지도 -->
 <div id="map" style="width:464px;height:400px;"></div>
 <script>
-  var mapOptions = {
-    center: new naver.maps.LatLng(37.5710911,126.9914501),
-    zoom: 20
-  };
-
+	
+	// 지도 생성
+	        var map = new naver.maps.Map('map', {
+				center: new naver.maps.LatLng(37.5710911,126.9914501), // 지도를 열 좌표
+				zoom: 18
+			});
+			
+	        // 지도에 해당 좌표 마커(아이콘 설정)
+	        var markerOptions = {
+	        	    position: new naver.maps.LatLng(37.5710911,126.9914501), //마커찍을 좌표
+	        	    map: map,
+	        	    icon: {
+	        	        url: '/images/marker.png', //아이콘 경로
+	        	        size: new naver.maps.Size(22, 36), //아이콘 크기
+	        	        origin: new naver.maps.Point(0, 0),
+	        	        anchor: new naver.maps.Point(11, 35)
+	        	    }
+	        	};
+	        
+	        // 마커 생성
+	        var marker = new naver.maps.Marker(markerOptions);
+	
   var map = new naver.maps.Map('map', mapOptions);
 </script>
           </div>
