@@ -631,23 +631,39 @@
 
         <div class="row block-9">
           <div class="col-md-6 ftco-animate">
-            <form class="gform" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbzyyo5GhI7M1vIeVYAF25BSgbu-4jZihVf6vXZojYX1VctXY_K-fg96d4DJNqlEGAiIKg/exec" target="frAttachFiles"> 
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name" name="name">
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Email" name="email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" name="title">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
+            <form class="subform" method="POST" data-email="abc@nate.com" 
+action="복사한 웹앱 url" target="frAttachFiles">
+  <ul>
+    <li class="error">
+      <div>
+        <input type="text" name="name" id="uname" placeholder="*Name" />
+      </div>
+    </li>
+    <li class="error">
+      <div>
+        <input type="email" name="email" id="uemail" placeholder="*Email" />
+      </div>
+    </li>
+    <li>
+      <div>
+        <select name="subject" id="subject">
+          <option value="subject">
+            What's your subject?
+          </option>
+          <option value="Web Developement">Website</option>
+          <option value="Mobile Application">
+            Mobile Application
+          </option>
+          <option value="program">Program</option>
+          <option value="Graphics Design">Design</option>
+          <option value="Marketing">SNS Marketing</option>
+        </select>
+      </div>
+    </li>
+  </ul>
+</form>
+...
+ <iframe name="frAttachFiles" style="display: none"></iframe>
           </div>
 
           <div class="col-md-6 d-flex align-items-stretch">
@@ -708,8 +724,6 @@
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
 	<!--script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=dde1a562e7fa4ee297307e353fe7e31d"></script-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvy1Jtc3oDcUp5xrB-v_DlMC3ZkRDUv_4&sensor=false"></script>
-    <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
